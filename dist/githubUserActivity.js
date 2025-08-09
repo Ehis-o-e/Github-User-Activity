@@ -1,2 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+import { argv } from "process";
+console.log(argv[2]);
+//# sourceMappingURL=githubUserActivity.js.map

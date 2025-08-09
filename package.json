@@ -1,0 +1,24 @@
+{
+  "name": "git-hub-user-activity-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ehis-o-e/Github-User-Activity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Ehis-o-e/Github-User-Activity/issues"
+  },
+  "homepage": "https://github.com/Ehis-o-e/Github-User-Activity#readme",
+  "devDependencies": {
+    "@types/node": "^24.2.1"
+  }
+}
