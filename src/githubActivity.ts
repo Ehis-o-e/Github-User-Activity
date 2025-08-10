@@ -22,7 +22,6 @@ function main(){
     };
 
     const url = `https://api.github.com/users/${trim}/events`;
-    console.log(url)
 
     https.get(url, options, (res)=>{
 
@@ -32,6 +31,11 @@ function main(){
         });
 
         res.on('end', ()=>{
+            if(res.statusCode !== 200){
+                (`Error: User '${trim}' not found or API error`);
+                return;
+            }
+
             try {
                 const parseData = JSON.parse(rawData);
                 parseData.forEach((content: any) => {
@@ -72,10 +76,9 @@ function main(){
                         console.log(`- Deleted ${content.payload.ref_type} ${content.payload.ref} from ${content.repo.name}`);
                         break;
                         
-                    // Add more event types as needed
+                    
                     default:
-                        // Uncomment if you want to see unhandled event types
-                        // console.log(`- Unknown activity: ${content.type}`);
+                        console.log(`- Unknown activity: ${content.type}`);
                         break;
                 }
             });
