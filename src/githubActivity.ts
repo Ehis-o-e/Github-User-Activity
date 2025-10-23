@@ -39,7 +39,7 @@ async function main(){
             switch(data[i].type){
                 case "PushEvent":
                     const name = data[i].repo.name;
-                    const commits = data[i].payload.commits.length;
+                     const commits = data[i].payload.commits ? data[i].payload.commits.length : 1; 
                      if(lastEvent && lastEvent.type === "PushEvent" && lastEvent.repo === name){
                         commitCount += commits;
                     } else {
